@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/lucywyman/libreo",
   "dependencies": {
+    "del": "^0.1.2",
     "gulp": "^3.8.7",
     "gulp-mocha": "^1.0.0",
     "gulp-traceur": "^0.13.0",

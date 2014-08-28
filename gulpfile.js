@@ -1,6 +1,7 @@
 var gulp = require("gulp");
 var traceur = require("gulp-traceur");
 var mocha = require("gulp-mocha");
+var del = require('del');
 
 gulp.task('build', function() {
 	return gulp.src("modules/**/*.js")
@@ -21,4 +22,8 @@ gulp.task("test", ["build", "build.tests"], function() {
 
 gulp.task("test.watch", ['build', 'build.tests', 'test'], function() {
 	return gulp.watch(["modules/**/*.js", "test/**/*.js"], ["test"]);  
+});
+
+gulp.task('clean', function(cb) {
+	del(['build'], cb);
 });
