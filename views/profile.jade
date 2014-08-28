@@ -1,0 +1,8 @@
+extends base
+
+#profile
+    h3 #{user.firstname} #{user.lastname}  (#{user.username})
+    p #{city.city}, #{city.state}
+    h3 #{user.username}'s Library
+    for book in library
+        

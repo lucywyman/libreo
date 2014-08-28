@@ -1,0 +1,13 @@
+extends base
+
+block sidebar
+.sidebar
+    ul
+        li: a(href='profile.jade') My Library
+        li: a(href='cities.jade') My City
+        li: a(href='addbook.jade') Add book
+        li: a(href='removebook.jade') Remove book
+        li
+            form#searchbar(action='searchresults.jade', name='searchbar', method='post')
+            input.searchinput(type='text' name='search')
+            input.submit(type='submit', value='Search')    

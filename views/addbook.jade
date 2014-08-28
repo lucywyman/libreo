@@ -1,0 +1,17 @@
+extends base
+
+form.Libreoform(action='', method='post')
+    p Author*
+    input.box(name='title', type='text', required=required, size=30)
+    p Title*
+    input.box(name='author', type='text', required=required, size=30)
+    p ISBN
+    input.box(name='isbn', type='text', size=30)
+    Option*
+    input.box(name='option', type='radio', required=required, value='Lend')
+        p.radio Lend
+    input.box(name='option', type='radio', required=required, value='Give')
+        p.radio Give
+    input.box(name='option', type='radio', required=required, value='Sell')
+        p.radio Sell
+    input.submit(name='submit', type='submit', value='Add book')
