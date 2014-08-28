@@ -27,6 +27,7 @@
     "gulp-mocha": "^1.0.0",
     "gulp-traceur": "^0.13.0",
     "mocha": "^1.21.4",
-    "traceur": "0.0.58"
+    "traceur": "0.0.58",
+    "mysql": "2.4.3"
   }
 }
