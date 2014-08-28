@@ -1,0 +1,24 @@
+{
+  "name": "libreo",
+  "version": "0.0.0",
+  "description": "Loan books locally",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucywyman/libreo.git"
+  },
+  "keywords": [
+    "books",
+    "library",
+    "loan"
+  ],
+  "author": "Lucy Wyman",
+  "license": "None, all rights reserved (for now)",
+  "bugs": {
+    "url": "https://github.com/lucywyman/libreo/issues"
+  },
+  "homepage": "https://github.com/lucywyman/libreo"
+}
