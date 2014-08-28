@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/lucywyman/libreo/issues"
   },
-  "homepage": "https://github.com/lucywyman/libreo"
+  "homepage": "https://github.com/lucywyman/libreo",
+  "dependencies": {
+    "gulp": "^3.8.7",
+    "mocha": "^1.21.4",
+    "traceur": "0.0.58"
+  }
 }
