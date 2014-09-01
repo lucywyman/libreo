@@ -1,0 +1,14 @@
+extends base.html
+
+if(results)
+    for result in results
+        .resultdiv
+            h3.results result.username
+            h4.results result.city
+            .book
+                h4 result.title
+                p result.authorname
+                p.option result.option
+else
+    p Oops! There don't seem to be any books or users matching those results.  
+    

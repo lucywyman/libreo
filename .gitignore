@@ -1,5 +1,9 @@
 *.swp
 *.swo
+db.js
+*.pyc
+.grunt
 
 node_modules
 build
+.sass-cache
