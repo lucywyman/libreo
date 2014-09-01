@@ -1,24 +1,22 @@
-!!! 5
+doctype html
 html
     head
-        title= Libreo | #{page}
-        link(rel='stylesheet', href='/css/style.css')
+        title= "Libreo | " + page.name
+        link(rel='stylesheet', type='text/css', href='/css/styles.css')
         meta(name='viewport', content='width=device-width, initial-scale=1')
-        //-Google fonts
-
     body
         #mainnav
             ul
                 li: p.logo Libreo
-                li: a(href='index.html') Home
-                li: a(href='about.html') About
-                if(//-Username is set for session)
-                    li: a(href='login.html') Login
-                    li: a(href='register.html') Register
+                li: a(href='/') Home
+                li: a(href='/about') About
+                if(!username)
+                    li: a(href='/login') Login
+                    li: a(href='/register') Register
                 else
-                    li: a(href='logout.html') Logout
-                
-        block sidebar
-        block content    
+                    li: a(href='/logout') Logout        
+        include ./sidebar.jade
+        .content
+            block content    
         #footer
                     

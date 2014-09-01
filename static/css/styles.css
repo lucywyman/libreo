@@ -1,0 +1,165 @@
+@import url(http://fonts.googleapis.com/css?family=Lemon|Alegreya+Sans);
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 100%;
+  text-rendering: optimizeLegibility; }
+
+html, body {
+  height: 100%; }
+
+/*Typography*/
+h1, h2, h3, h4, h5, p, a {
+  font-family: "Alegreya Sans", sans-serif;
+  display: block;
+  text-decoration: none;
+  margin: 0px; }
+
+h1 {
+  font-size: 4.5em; }
+
+h2 {
+  font-size: 3.5em; }
+
+h3 {
+  font-size: 2.84em; }
+
+h4 {
+  font-size: 2.13em; }
+
+p, a {
+  font-size: 1.75em; }
+
+.option {
+  font-size: 1.5em; }
+
+/*Navigation menu*/
+#mainnav {
+  padding: 0px;
+  margin: 0px;
+  width: 100vw;
+  background: #00b4ff;
+  height: 50px;
+  position: fixed;
+  z-index: 10; }
+  #mainnav ul {
+    margin-left: 5%;
+    margin-top: 0px; }
+  #mainnav ul li {
+    display: inline-block;
+    vertical-align: middle; }
+  #mainnav ul li a, #mainnav h3 {
+    color: #515151;
+    font-weight: 600;
+    line-height: 50px;
+    padding: 0px 10px; }
+  #mainnav ul li a:hover {
+    color: #00b4ff;
+    background: #515151; }
+  #mainnav .logo {
+    font-family: 'Lemon', cursive;
+    color: white;
+    padding: 0px 10px;
+    font-weight: 600; }
+
+/*Content*/
+.content {
+  width: 50vw;
+  max-width: 50vw;
+  padding-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 80vh;
+  padding-bottom: 20vh;
+  text-align: center; }
+  .content h2, .content h3, .content h4, .content p, .content li {
+    color: #515151; }
+  .content a {
+    color: #00b4ff;
+    display: inline-block;
+    font-size: 1em; }
+
+/*Forms*/
+.libreoForm {
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  text-align: left;
+  background: #eeeeee;
+  border: 2px solid #515151;
+  border-radius: 10px;
+  padding: 20px; }
+  .libreoForm p, .libreoForm select p {
+    color: #515151;
+    margin: 0px; }
+  .libreoForm h3 {
+    margin-bottom: 10px; }
+
+.warningtext {
+  color: red;
+  margin: 0px;
+  padding: 0px; }
+
+.box, select {
+  border: 2px solid #515151;
+  background: white;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 20px; }
+
+.submit {
+  padding: 10px;
+  margin: 10 10 10 0;
+  border: 2px solid #00b4ff;
+  color: #00b4ff;
+  font-weight: 600;
+  background: #515151; }
+
+.submit:hover {
+  cursor: pointer; }
+
+.submit:active {
+  color: #515151;
+  border: 2px solid #515151;
+  background: #00b4ff; }
+
+/*Sidebar*/
+.sidebar {
+  background: #515151;
+  width: 18vw;
+  margin: 0px;
+  padding: 20px 0;
+  position: absolute;
+  top: 50px;
+  left: 0px; }
+  .sidebar ul {
+    list-style: none outside none;
+    margin: 0px;
+    padding: 0px; }
+  .sidebar ul li {
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    vertical-align: middle;
+    text-align: center; }
+  .sidebar ul li a {
+    color: #eeeeee;
+    padding: 10px 0px;
+    font-weight: 600; }
+  .sidebar ul li a:hover {
+    color: #00b4ff;
+    background-color: rgba(255, 255, 255, 0.2); }
+  .sidebar .searchinput {
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid #00b4ff;
+    max-width: 80%; }
+  .sidebar .submit {
+    background: #00b4ff;
+    border: 2px solid white;
+    color: white; }
+
+/*Page specific styles*/
+.about {
+  text-align: left; }

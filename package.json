@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lucywyman/libreo.git"
+    "url": "https://github.com/lucywyman/libreo"
   },
   "keywords": [
     "books",
@@ -27,6 +27,11 @@
     "gulp-mocha": "^1.0.0",
     "gulp-traceur": "^0.13.0",
     "mocha": "^1.21.4",
-    "traceur": "0.0.58"
+    "traceur": "0.0.58",
+    "express": "3.x",
+    "jade": "*"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.6.1"
   }
 }

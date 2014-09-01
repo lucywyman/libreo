@@ -1,0 +1,219 @@
+@import url(http://fonts.googleapis.com/css?family=Lemon|Alegreya+Sans);
+
+//First things first, define some variables
+$primary: #00B4FF;
+$secondary: #515151;
+$tertiary: #eee;
+$accent: #fff;
+$lighttext: #fff;
+$darktext: #515151;
+$sans: 'Alegreya Sans', sans-serif;
+//$serif: ;
+$navheight: 50px;
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-size: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+html, body{
+    height: 100%;
+}
+
+/*Typography*/
+h1, h2, h3, h4, h5, p, a{
+    font-family: $sans;
+    display: block;
+    text-decoration: none;
+    margin: 0px;
+}
+
+h1{
+    font-size: 4.5em;}
+h2{
+    font-size: 3.5em;}
+h3{
+    font-size: 2.84em;}
+h4{
+    font-size: 2.13em;}
+p, a{
+    font-size: 1.75em;}
+.option{
+    font-size: 1.5em;}
+
+/*Navigation menu*/
+#mainnav{
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
+    background: $primary;
+    height: $navheight;
+    position: fixed;
+    z-index: 10;
+    
+    ul{
+        margin-left: 5%;
+        margin-top: 0px;
+    }
+
+    ul li{
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    ul li a, h3{
+        color: $darktext;
+        font-weight: 600;
+        line-height: $navheight;
+        padding: 0px 10px;
+    }
+
+    ul li a:hover{
+        color: $primary;
+        background: $darktext;
+    }
+    
+    .logo{
+        font-family: 'Lemon', cursive;
+        color: $lighttext;
+        padding: 0px 10px;
+        font-weight: 600;
+    }
+}
+
+/*Content*/
+.content{
+    width: 50vw;
+    max-width: 50vw;
+    padding-top: $navheight + 20px; //The magic of Sass
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 80vh;
+    padding-bottom: 20vh;
+    text-align: center;
+
+    h2, h3, h4, p, li{
+        color: $darktext;
+    }
+    
+    a{
+        color: $primary;
+        display: inline-block;
+        font-size: 1em;
+    }
+}
+
+/*Forms*/
+.libreoForm{
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    text-align: left;
+    background: $tertiary;
+    border: 2px solid $secondary;
+    border-radius: 10px;
+    padding: 20px;
+
+    p, select p{
+        color: $darktext;
+        margin: 0px;
+    }
+    
+    h3{
+        margin-bottom: 10px;
+    }
+}
+
+.input{}
+
+.warningtext{
+    color: red;
+    margin: 0px;
+    padding: 0px;
+}
+
+.box, select{   
+    border: 2px solid $darktext;
+    background: $accent;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+.submit{
+    padding: 10px;
+    margin: 10 10 10 0;
+    border: 2px solid $primary;
+    color: $primary;
+    font-weight: 600;
+    background: $secondary;
+}
+
+.submit:hover {
+    cursor: pointer;
+}
+
+.submit:active {
+    color:$secondary;
+    border: 2px solid $secondary;
+    background: $primary;
+}
+
+/*Sidebar*/
+.sidebar{
+    background: $secondary;
+    width: 18vw;
+    margin: 0px;
+    padding: 20px 0;
+    position: absolute;
+    top: $navheight;
+    left: 0px;
+    
+    ul{
+        list-style: none outside none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    ul li{
+        padding: 0px;
+        margin: 0px;
+        display: block; 
+        vertical-align: middle;
+        text-align: center;
+    }
+    
+    ul li a{
+        color: $tertiary;
+        padding: 10px 0px;
+        font-weight: 600;
+    }
+
+    ul li a:hover {
+        color: $primary;
+        background-color: rgba(255, 255, 255, .2);
+    }
+    
+    .searchinput {
+        padding: 5px;
+        margin: 5px;
+        border: 2px solid $primary;
+        max-width: 80%;
+    }
+    
+    .submit {
+        background: $primary;
+        border: 2px solid $accent;
+        color: $accent;
+    }
+}
+ 
+/*Page specific styles*/
+.about {
+    text-align: left;    
+}
+
