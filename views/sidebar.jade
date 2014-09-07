@@ -5,6 +5,6 @@
         li: a(href='/addbook') Add book
         li: a(href='/removebook') Remove book
         li
-            form#searchbar(action='searchresults.jade', name='searchbar', method='post')
-            input.searchinput(type='text' name='search')
-            input.submit(type='submit', value='Search')    
+            form#searchbar(action='/searchResults', name='searchbar', method='post')
+                input.searchinput(type='text' name='search')
+                input.submit(type='submit', value='Search')    
