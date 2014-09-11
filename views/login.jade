@@ -1,6 +1,7 @@
 extends base
 
 block content
+    p.message #{message}
     form.libreoForm(method='post', action='/loginAction')
         h3 Login
         .input

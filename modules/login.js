@@ -1,16 +1,16 @@
-var db = require('./db.js');
-
-function login(username, password){
-  var query = 'SELECT * FROM LibreoUsers WHERE username=' + username + ' AND password = '+ password +'';
-  db.query(query, function(error, rows){
-      if(error){
+function login(username, password, connection){
+  var q = "SELECT * FROM LibreoUsers WHERE username='" + username + "' AND password = '"+ password + "'";
+  connection.query(q, function(err, rows){
+    if(err){
       //error handling
-      return NULL;
-      }
-      else{
-      return data.userid;
-      }      
-      });
+      console.log("Fuck " + err);
+      //return NULL;
+    }
+    else{
+      console.log(rows[0].username);
+      return rows[0].userid;
+    }      
+  });
 }
 
 module.exports.login = login;
