@@ -4,6 +4,8 @@ db.js
 *.pyc
 .grunt
 
+*.map
+
 node_modules
 build
 .sass-cache

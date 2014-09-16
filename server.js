@@ -8,21 +8,16 @@ var cookieSession = require('cookie-session');
 
 //Including external files
 var searchModule = require('./modules/search.js');
-var loginModule = require('./modules/login.js');
+var loginModule = require('./modules/routes/login.js');
 var registerModule = require('./modules/register.js');
 var db = require('./modules/db.js');
 
-var connection = db.connection.getConnection(function(err){
+var connection = db.connection(function(err){
   console.log(err);
 });
 
-//connection.connect(function(err){
-  //console.log(err);
-//});
-
 var app = express();
 var server = http.createServer(app);
-
 
 //Cookie parser to, well, handle cookies
 app.use(bodyParser.json());
