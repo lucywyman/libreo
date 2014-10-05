@@ -211,9 +211,30 @@ p, a{
         color: $accent;
     }
 }
- 
+
+.message{
+    margin: 30px;
+}
+
 /*Page specific styles*/
 .about {
     text-align: left;    
 }
 
+.error {
+    margin: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    h2{
+    }
+
+    a{
+        padding: 10px;
+        margin: 20px;
+        font-size: 2.5em;
+        background: $secondary;
+        color: $primary;
+        border: 2px solid $primary;
+    }
+} 

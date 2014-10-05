@@ -2,24 +2,24 @@
 var express = require('express');
 var http = require('http');
 var url = require('url');
-var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
 var cookieSession = require('cookie-session');
 
 //Including external files
 var searchModule = require('./modules/search.js');
-var loginModule = require('./modules/login.js');
+var loginModule = require('./routes/login.js');
 var registerModule = require('./modules/register.js');
+var connection = require('./modules/db.js').connection;
 
 var app = express();
 var server = http.createServer(app);
 
-app.use(app.router);
-
 //Cookie parser to, well, handle cookies
-app.use(cookieParser());
-app.use(bodyParser());
-app.use(cookieSession({secret: 'super-secret'}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.cookieParser());
+app.use(express.cookieSession({secret: 'bombay'}));
 
 //Defining static directory
 app.use(express.static(__dirname + '/static'));
@@ -29,8 +29,7 @@ app.use(express.static(__dirname + '/static'));
 app.set('view engine', 'jade');
 app.set('views', './views');
 
-//Tell server to run
-server.listen(8888);
+app.use(app.router);
 
 //Now, let's start serving some pages!
 app.get('/', function(request, response){
@@ -46,13 +45,13 @@ app.get('/login', function(request, response){
     });
 
 app.post('/loginAction', function(request, response){
-    var login = loginModule.login(request.body.username, request.body.password);
+    var login = loginModule.login(request.body.username, request.body.password, connection);
     if(login){
     app.use(expression.session({'userid': login}));
     response.render('index.jade', {'page' : {'name': 'Home'}, 'message' : 'Login successful!'});
     }
     else{
-    response.render('login.jade', {'page' : {'name': 'Login'}, 'message': 'Oops!  Either your username or password was incorrect. Please try again.'})
+    response.render('error.jade', {'page' : {'name': 'Login'}, 'message': 'Oops!  Either your username or password was incorrect. Please try again.'})
       }
       });
 
@@ -73,5 +72,4 @@ app.post('/searchResults', function(request, response){
     });
 
 
-
-
+server.listen(8888);
