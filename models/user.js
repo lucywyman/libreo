@@ -1,6 +1,5 @@
 var Sequelize = require('sequelize');
-module.exports.User =  function(sequelize) {
-  var User = sequelize.define('User', {
+module.exports.User = sequelize.define('User', {
     userid: {type: Sequelize.integer,
       primaryKey: true,
       autoIncrement: true
@@ -33,7 +32,7 @@ module.exports.User =  function(sequelize) {
       timestamps: false,
   });
 
-  User.sync();
-  return User;
-};
+//  User.sync();
+//  return User;
+//};
 

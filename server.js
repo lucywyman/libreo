@@ -8,13 +8,9 @@ var cookieSession = require('cookie-session');
 
 //Including external files
 var searchModule = require('./modules/search.js');
-var loginModule = require('./modules/routes/login.js');
+var loginModule = require('./routes/login.js');
 var registerModule = require('./modules/register.js');
-var db = require('./modules/db.js');
-
-var connection = db.connection(function(err){
-  console.log(err);
-});
+var connection = require('./modules/db.js').connection;
 
 var app = express();
 var server = http.createServer(app);
